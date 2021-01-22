@@ -24,13 +24,14 @@ const App: React.FC = () => {
     <>
       {/* use data-test to test component loading */}
       <div className="App" data-test="app-component">
-        {/*  will pass method to component to 
+        <div className="wrapper">
+          {/*  will pass method to component to 
         demonstrate passing props with typeScript */}
-        <NewTodoInput handleNewItem={handleNewItem} />
-        <hr />
+          <NewTodoInput handleNewItem={handleNewItem} />
 
-        {/* normal component - self contatained methods*/}
-        <TodoItem />
+          {/* normal component - self contatained methods*/}
+          <TodoItem />
+        </div>
       </div>
     </>
   );

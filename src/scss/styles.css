@@ -1,1 +1,154 @@
-/* No CSS *//*# sourceMappingURL=styles.css.map */
+@import url("https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap");
+*,
+*::before,
+*::after {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none !important;
+}
+
+.clear-fix {
+  height: 0;
+  line-height: 0;
+  clear: both;
+}
+
+body {
+  font-family: Roboto;
+  font-size: 16px;
+  background-color: #ddd;
+}
+
+.App {
+  width: 100vw;
+  padding: 1rem;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+}
+
+.App .wrapper {
+  width: 75%;
+}
+
+@media only screen and (max-width: 468px) {
+  body {
+    background-color: #212121;
+  }
+  .App {
+    padding: 0.5rem;
+  }
+  .App .wrapper {
+    width: 100%;
+  }
+}
+
+ul.todo-item-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+ul.todo-item-list li {
+  cursor: pointer;
+  position: relative;
+  padding: 0.75rem 0.5rem 0.75rem 2.5rem;
+  background: #eee;
+  font-size: 1.25rem;
+  -webkit-transition: 0.2s;
+  transition: 0.2s;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  min-height: 3rem;
+}
+
+ul.todo-item-list li:nth-child(odd) {
+  background: #f9f9f9;
+}
+
+ul.todo-item-list li:hover {
+  color: #fff;
+  background: #8c28d3;
+}
+
+ul.todo-item-list li.checked {
+  background: #888;
+  color: #fff;
+  text-decoration: line-through;
+}
+
+ul.todo-item-list li.checked:before {
+  content: "";
+  position: absolute;
+  border-color: #fff;
+  border-style: solid;
+  border-width: 0 0.125rem 0.125rem 0;
+  top: 0.625rem;
+  left: 1rem;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  height: 1rem;
+  width: 0.5rem;
+}
+
+ul.todo-item-list li span.close {
+  position: absolute;
+  right: 0;
+  top: 0;
+  padding: 0.75rem 1rem;
+}
+
+ul.todo-item-list li span.close:hover {
+  background-color: #53187d;
+  color: white;
+}
+
+.new-todo-input {
+  background-color: #53187d;
+  padding: 1.875rem 2.5rem;
+  color: white;
+}
+
+.new-todo-input:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.new-todo-input input {
+  margin: 0;
+  border: none;
+  border-radius: 0;
+  width: 75%;
+  height: 2.5rem;
+  padding: 0.625rem;
+  float: left;
+  font-size: 1rem;
+}
+
+.add-btn {
+  padding: 0.625rem;
+  width: 25%;
+  height: 2.5rem;
+  background: #d9d9d9;
+  color: #555;
+  float: left;
+  text-align: center;
+  font-size: 1rem;
+  cursor: pointer;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  border-radius: 0;
+}
+
+.add-btn:hover {
+  background-color: #bbb;
+}
+/*# sourceMappingURL=styles.css.map */
